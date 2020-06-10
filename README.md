@@ -1,2 +1,2 @@
 20150359 Park Jeongjae
-Kookmin Univ. SW
+Kookmin Univ. SW(CS)
