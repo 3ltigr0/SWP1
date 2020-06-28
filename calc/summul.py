@@ -10,10 +10,13 @@ def application(environ, start_response):
     x = ''
     y = ''
     if '' not in [a, b]:
-        a = int(a)
-        b = int(b)
-        x = str(a+b)
-        y = str(a*b)
+        try:
+            a = int(a)
+            b = int(b)
+            x = str(a+b)
+            y = str(a*b)
+        except ValueError:
+            s = 'a and b must be integers'
     else:
         s = 'Please enter value'
     response_body = html % (s, x, y) #+ 'sum: ' + str(x) + ' mul: ' + str(y)
